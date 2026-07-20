@@ -1,19 +1,15 @@
-# chrome-extentions
-
-A collection of Chrome extensions.
-
-## High Contrast Switch (`hc-switch`)
+# High Contrast Switch
 
 An extension that toggles **forced colors** mode (high contrast) on a per-tab basis — handy for testing website accessibility without changing your system settings.
 
-### How it works
+## How it works
 
 - Clicking the extension icon enables emulation of the `forced-colors: active` media feature for the active tab via the Chrome DevTools Protocol (`Emulation.setEmulatedMedia`, using the `debugger` permission).
 - Clicking again disables the emulation and detaches the debugger.
 - The icon reflects the current state (on/off) for each tab individually.
 - State is kept in `chrome.storage.session` and is reset when the tab is closed or when Chrome detaches the debugger itself (for example, when DevTools is opened).
 
-### Installation (Developer mode)
+## Installation (Developer mode)
 
 1. Clone or download this repository:
    ```bash
