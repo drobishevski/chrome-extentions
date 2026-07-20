@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "High Contrast Switch",
+  "version": "1.0.0",
+  "description": "Toggle forced colors.",
+  "permissions": [
+    "debugger",
+    "storage"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/png/off-16.png",
+      "32": "assets/png/off-32.png",
+      "48": "assets/png/off-48.png",
+      "128": "assets/png/off-128.png"
+    },
+    "default_title": "Enable Forced Colors"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
