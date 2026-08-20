@@ -1,25 +1,37 @@
-# High Contrast Switch
+# Chrome Extensions
 
-An extension that toggles **forced colors** mode (high contrast) on a per-tab basis — handy for testing website accessibility without changing your system settings.
+A small collection of Chrome extensions for website development and testing.
 
-## How it works
+## Installation
 
-- Clicking the extension icon enables emulation of the `forced-colors: active` media feature for the active tab via the Chrome DevTools Protocol (`Emulation.setEmulatedMedia`, using the `debugger` permission).
-- Clicking again disables the emulation and detaches the debugger.
-- The icon reflects the current state (on/off) for each tab individually.
-- State is kept in `chrome.storage.session` and is reset when the tab is closed or when Chrome detaches the debugger itself (for example, when DevTools is opened).
+1. Clone the repository or download it as an archive:
 
-## Installation (Developer mode)
-
-1. Clone or download this repository:
    ```bash
-   git clone https://github.com/<your-account>/chrome-extentions.git
+   git clone https://github.com/drobishevski/chrome-extentions.git
    ```
-2. Open Chrome and go to the extensions page: type `chrome://extensions` in the address bar and press Enter.
-3. Enable the **Developer mode** toggle in the top-right corner of the page.
-4. Click the **Load unpacked** button that appears.
-5. In the folder picker, select the `hc-switch` folder inside the repository and click **Select**.
-6. The extension appears in the list and its icon shows up on the toolbar. If you don't see the icon, click the puzzle piece 🧩 and pin **High Contrast Switch**.
-7. Open any tab and click the extension icon — forced colors mode turns on. Click again to turn it off.
 
-> When the mode is enabled, Chrome shows a banner saying "High Contrast Switch" started debugging this browser — this is expected, since the extension uses the DevTools Protocol. Don't dismiss it, or the emulation will be turned off.
+2. Open `chrome://extensions` in Chrome.
+3. Enable **Developer mode** in the top-right corner.
+4. Click **Load unpacked**.
+5. Select the folder of the extension you want to install:
+
+   - `hc-switch` — toggles high contrast mode;
+   - `chrome-image-replacer` — replaces images on a page with local files.
+
+6. If needed, pin the extension to the browser toolbar from the **Extensions** menu (the puzzle-piece icon).
+
+To install both extensions, repeat steps 4–5 for each folder.
+
+## Extensions
+
+### High Contrast Switch
+
+Toggles emulation of the system high contrast mode (`forced-colors`) independently for each tab. It is useful for quickly testing website accessibility and appearance without changing system settings.
+
+Click the extension icon to enable the mode, then click it again to disable it. Chrome displays a debugging notification while the mode is active—this is expected because the extension uses the Chrome DevTools Protocol.
+
+### Local Image Replacer
+
+Temporarily replaces any `<img>` element on a page with an image file from your computer. The file is processed locally and is never uploaded.
+
+Click the extension icon, move the pointer over the target image, click it, and select a local file. The replacement lasts until the page is reloaded. The extension cannot run on Chrome internal pages or the Chrome Web Store.
