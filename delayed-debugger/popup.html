@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delayed Debugger</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main aria-label="Delayed Debugger">
+      <div class="menu-title">Start debugger</div>
+      <div class="delay-list" role="menu" aria-label="Debugger delay">
+        <button type="button" role="menuitem" data-delay="0">Immediately</button>
+        <div class="separator" role="separator"></div>
+        <button type="button" role="menuitem" data-delay="2000">After 2 seconds</button>
+        <button type="button" role="menuitem" data-delay="4000">After 4 seconds</button>
+        <button type="button" role="menuitem" data-delay="6000">After 6 seconds</button>
+        <button type="button" role="menuitem" data-delay="8000">After 8 seconds</button>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
