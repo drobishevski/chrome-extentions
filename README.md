@@ -16,7 +16,8 @@ A small collection of Chrome extensions for website development and testing.
 5. Select the folder of the extension you want to install:
 
    - `hc-switch` — toggles high contrast mode;
-   - `chrome-image-replacer` — replaces images on a page with local files.
+   - `chrome-image-replacer` — replaces images on a page with local files;
+   - `delayed-debugger` — pauses the current page in DevTools after five seconds.
 
 6. If needed, pin the extension to the browser toolbar from the **Extensions** menu (the puzzle-piece icon).
 
@@ -35,3 +36,7 @@ Click the extension icon to enable the mode, then click it again to disable it. 
 Temporarily replaces any `<img>` element on a page with an image file from your computer. The file is processed locally and is never uploaded.
 
 Click the extension icon, move the pointer over the target image, click it, and select a local file. The replacement lasts until the page is reloaded. The extension cannot run on Chrome internal pages or the Chrome Web Store.
+
+### Delayed Debugger
+
+Opens a Chrome-style menu with immediate, 2, 4, 6, and 8-second options when the extension icon is clicked. After an option is selected, it runs or schedules a `debugger` statement in the current page. Open DevTools before the timer expires so the page pauses at the statement.
